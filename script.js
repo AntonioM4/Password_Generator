@@ -1,4 +1,4 @@
-var selectChars = "";
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -26,15 +26,17 @@ function writePassword() {
   var password = generatePassword();
   function generatePassword(){
     var genCriteria = ["", "", "", ""]
+    var selectChars = "";
 
-
+    // How the password chooses characters
     genCriteria[0] = uppercase;
     genCriteria[1] = lowercase;  
     genCriteria[2] = numbers; 
     genCriteria[3] = symbol; 
 
-    console.log(genCriteria)
+    console.log('GenCrit 1: ', genCriteria)
   
+      // If statements using users input from confirm boxes
     if (genCriteria[0] == true){
       selectChars = "QWERTYUIOPLKJHGFDSAZXCVBNM";
     }
@@ -48,7 +50,10 @@ function writePassword() {
       selectChars = selectChars.concat("!@#$%^&*()-_+=~/|[]{},.`<>?");
     }
     Passwordlength = passwordLength
-  
+
+    
+    console.log("Seledct Chars: ", selectChars);
+    // password Length 
     var pw = ""; 
 
     for (var i = 0; i < Passwordlength; i++){
