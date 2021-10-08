@@ -11,7 +11,7 @@ function writePassword() {
 
   // confirm boxes after clicking generate 
   var passwordLength = prompt("How many characters would you like your password to be?");
-    if(passwordLength<=8 || passwordLength>=128){
+    if(passwordLength <= 7 || passwordLength >= 129){
       alert("Must be between 8 and 128 characters");
       return;
     }else {
@@ -22,7 +22,7 @@ function writePassword() {
   var symbol = confirm ("Ok to add symbols to your password");
   
   
-  
+ // Password generator  
   var password = generatePassword();
   function generatePassword(){
     var genCriteria = ["", "", "", ""]
