@@ -20,7 +20,6 @@ function writePassword() {
   var lowercase = confirm ("Ok to add lowercase letters to your password");
   var numbers = confirm ("Ok to add numbers to your password");
   var symbol = confirm ("Ok to add symbols to your password");
-
   
   
   
@@ -30,9 +29,9 @@ function writePassword() {
 
 
     genCriteria[0] = uppercase;
-    genCriteria[1] = lowercase;
-    genCriteria[2] = numbers;
-    genCriteria[3] = symbol;
+    genCriteria[1] = lowercase;  
+    genCriteria[2] = numbers; 
+    genCriteria[3] = symbol; 
 
     console.log(genCriteria)
   
@@ -51,7 +50,6 @@ function writePassword() {
     Passwordlength = passwordLength
   
     var pw = ""; 
-    console.log(selectChars)
 
     for (var i = 0; i < Passwordlength; i++){
       pw = pw.concat(selectChars.charAt(Math.floor(Math.random() * selectChars.length)));
